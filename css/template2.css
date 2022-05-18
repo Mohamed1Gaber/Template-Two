@@ -1,0 +1,579 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #19c8fa;
+    --color: whitesmoke;
+    --back-color: #1f262c;
+    --main-width: 80%;
+    --main-margin: 40px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+/* start of header */
+header{
+    background-image: url(../photos/pexels-dariusz-grosa-736355.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: var(--back-color); */
+    height: 100vh;
+}
+header .main-header{
+    width: var(--main-width);
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header .main-header img{
+    width: 130px;
+    height: 50px;
+}
+header .main-header nav ::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: silver;
+}
+header .main-header nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+header .main-header{
+    position: relative;
+}
+header .main-header nav ul li{
+    margin: 18px 5px 0px 19px;
+    position: relative;
+    z-index: 2;
+}
+header .main-header nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+header .main-header hr{
+    margin: 0px;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    margin-top: 44px;
+    background-color: silver;
+}
+header .main-header nav ul i.fa-magnifying-glass{
+    color: white;
+    margin: 5px;
+    padding-left: 10px;
+    border-left: 2px solid white;
+    margin: 20px 5px 10px 5px;
+}
+header nav i.fa-bars{
+    display: none;
+}
+header .main-header nav ul li:hover{
+    border-bottom: 2px solid var(--main-color);
+}
+header .main-header nav ul li:hover > a{
+    color: var(--main-color);
+}
+@media (max-width:767px){
+    header .main-header i.fa-bars{
+        display: block;
+        font-size: 30px;
+        color: white;
+    }
+    header .main-header nav ul{
+        width: 100%;
+        display: unset;
+        position: absolute;
+        transform: translate(calc(-100% + 27px), 20px);
+        visibility: hidden;
+        z-index: 2;
+        background-color: rgb(24 112 146 / 71%);
+        border-radius: 6px;
+
+    }
+    header .main-header i.fa-bars:hover + ul {
+        visibility: visible;
+    }
+    header .main-header nav ul li{
+        margin: 10px 0px 10px 30px;
+    }
+    .main-header nav ul i.fa-magnifying-glass{
+        display: none;
+    }
+}
+.secondary{
+    position: relative;
+    background-color: #19c8faba;
+    width: 60%;
+    height: 50%;
+    transform: translateY(30%);
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.secondary div{
+    width: 70%;
+    margin-right: 20px;
+}
+.secondary div h1{
+    text-transform: capitalize;
+    color: white;
+}
+.secondary div p{
+    color: whitesmoke;
+}
+header i.fa-angle-left{
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 16px);
+    color: white;
+    z-index: 2;
+}
+header i.fa-angle-right{
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 16px);
+    color: white;
+}
+@media (max-width:767px){
+    .secondary{
+        width: 100%;
+        border-radius: 0px;
+    }
+    .secondary div{
+        width: 100%;
+        margin: 0px 60px 0px 60px;
+    }
+}
+header .bullets{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    display: flex;
+    margin-left: -45px;
+}
+header .bullets div{
+    width: 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    height: 15px;
+    margin: 5px
+}
+header .bullets div:nth-child(2){
+    background-color: var(--main-color);
+}
+/* end of header */
+
+/* starr of services */
+.servives .title{
+    text-align: center;
+    color: black;
+}
+.servives .title h2{
+    text-transform: uppercase;
+    width: 120px;
+    margin: var(--main-margin) auto;
+    position: relative;
+}
+.servives .title h2::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: silver;
+    position: absolute;
+    transform: translatey(38px);
+}
+.servives .title h2::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 4px solid silver;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    transform: translate(-372% , 30px);
+}
+.servives .title p{
+    width: 40%;
+    margin: auto;
+}
+.servives .col{
+    width: calc(var(--main-width) - 50px);
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 50px;
+}
+.servives .col .column div i{
+    font-size: 40px;
+}
+.servives .col .column div span{
+    margin-left: 50px;
+}
+.servives .col .column div span h3{
+    color: var(--main-color);
+    margin: 0px;
+}
+.servives .col .column div{
+    display: flex;
+}
+@media (max-width:767px){
+    .servives .col{
+        grid-template-columns: 1fr;
+        width: 100%;
+        /* margin-left: 10px;
+        margin-right: 10px; */
+    }
+    .servives .col .column div{
+        flex-direction: column;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .servives .col .column div span{
+        margin: 10px 0px 0px 0px;
+    }
+    .servives .title p{
+        width: 80%;
+    }
+}
+/* end of services */
+/* start of design */
+.design{
+    height: 70vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(../photos/pexels-elviss-railijs-bitāns-1389429.jpg);
+    background-size: cover;
+}
+.design .secondary{
+    transform: translate(0px);
+    border-radius: 10px 0px 0px 10px;
+    justify-content: flex-start;
+    height: 70%;
+}
+.design .secondary div{
+    margin-left: 70px;
+}
+.design ul{
+    padding: 0px;
+}
+.design ul li{
+    list-style: none;
+    color: white;
+    margin: 10px 0px;
+}
+.design ul li::before{
+    font-family: 'font awesome 5 free';
+    content: '\f108';
+    font-weight: 900;
+    margin-right: 20px;
+}
+@media (max-width:767px) {
+    .design .secondary div{
+        margin-left: 60px;
+    }
+}
+/* end of design */
+
+/* start of portfolio */
+.portfolio .servives .title h2.port{
+    width: 145px;
+}
+.portfolio .servives .title h2.port::after{
+    transform: translate(-441% , 30px);
+}
+.portfolio .choose{
+    width: 50%;
+    margin: var(--main-margin) auto;
+    display: flex;
+}
+.portfolio .choose div{
+    text-transform: capitalize;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid silver; */
+}
+.portfolio .choose div:first-child{
+    background-color: var(--main-color);
+}
+.portfolio .choose div:hover{
+    background-color: var(--main-color);
+}
+.portfolio .agence{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.portfolio .agence .box{
+    width: 25%; 
+    height: 200px;   
+    position: relative;
+    perspective: 300px;
+    perspective-origin: center;
+    overflow: hidden;
+}
+.portfolio .agence .box img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform .2s 0s linear;
+}
+.portfolio .agence .box p{
+    display: none;
+    transition: opacity .2s 0s linear;
+}
+.portfolio .agence .box:hover > p{
+    display: block;
+    padding: 20px;
+    color: black;
+    font-weight: bold;
+    transform: translatey(140px);
+    position: absolute;
+    margin: 0px;
+    width: 100%;
+    background-color: #eee;
+    height: 30%;
+    opacity: .8;
+}
+.portfolio .agence .box:hover > img{
+    transform: rotate(2deg) translateZ(30px);
+}
+/* .portfolio .agence .box:hover > p::before{
+    width: 50px;
+    height: 50px;
+    color: var(--color);
+    border-radius: 30px;
+    content: + ;
+} */
+.portfolio .more{
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: black;
+    text-transform: capitalize;
+    border: none;
+    margin-left: 40%;
+}
+@media (max-width:767px) {
+    .portfolio .choose{
+        width: 100%;
+    }
+    .portfolio .agence{
+        flex-wrap: wrap;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .portfolio .agence .box{
+        width: 50%;
+        margin-bottom: 5px;
+    }
+}
+/* end of portfolio */
+/* start of about */
+.about{
+    margin-top: var(--main-margin);
+    height: 70vh;
+    background-size: cover;
+}
+.about .servives .title h2{
+    width: 122px;
+}
+.about .servives .title h2::after{    
+    transform: translate(-391% , 30px);
+}
+/* end of about */
+
+/* start of pricing */
+.price .servives .title h2{
+    width: 105px;
+}
+.price .servives .title h2::after{
+    transform: translate(-337% , 30px);
+}
+.price .col{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    margin-top: 50px;
+    gap: 20px;
+}
+.price .col span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price .col .column{
+    border: 2px solid var(--main-color);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    width: 100%;
+}
+.price .col .column div{
+    display: block;
+    margin: 20px 0px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.price .col .column div:first-child{
+    border-bottom: 2px solid var(--main-color);
+    margin: 0px;
+}
+.price .col span .column div:last-child{
+    border: none;
+}
+.price .col .column div h2{
+    font-size: 30px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.price .col .column div:not(:first-child){
+    width: 52%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 0px;
+}
+.but{
+    width: 52%;
+    margin: 20px 0px;
+    border-color: var(--main-color);
+    background-color: white;
+}
+sup,
+sub{
+    font-size: 16px;
+}
+sup{
+    margin-right: 10px;
+}
+sub{
+    margin-left: 10px;
+}
+@media (max-width:767px){
+    .price .col{
+        grid-template-columns: repeat(2 , 1fr);
+
+    }
+    .price .col .column{
+        border-top-color: black;
+    }
+}
+@media (max-width:480px){
+    .price .col{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .price .col .column div:not(:first-child){
+        display: none;
+    }
+    .price .col .column div:first-child{
+        border: none;
+    }
+    .price .col .column:hover > div:not(:first-child){
+        display: table;
+        border: none;
+    }
+}
+/* end of pricing */
+
+/* start of contct */
+.contact .servives .title h2{
+    width: 160px;
+}
+.contact .servives .title h2::after{
+    transform: translate(-470% , 30px);
+}
+.contact .email {
+    width: calc(var(--main-width) - 20px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: var(--main-margin);
+}
+.contact .email .column1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+}
+.contact .email .column1 input{
+    width: 100%;
+    height: 15%;
+}
+.contact .email .column1 input:last-child{
+    height: 50%;
+}
+.contact .email .column2{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+@media (max-width:480px){
+    .contact .email{
+        grid-template-columns: 1fr;
+        grid-template-rows: 10fr 9fr;
+    }
+    .contact .email .column2{
+        flex-direction: row;
+    }
+}
+/* end of contact */
+
+/* start of footer */
+footer{
+    background-image: url(../photos/pexels-dariusz-grosa-736355.jpg);
+    background-size: cover;
+    text-align: center;
+    height: 60vh;
+}
+footer img{
+    width: 150px;
+    height: 66px;
+}
+.foot .servives .title h2{
+    width: 194px;
+    color: white;
+}
+.foot .servives .title h2::after{
+    display: none;
+}
+.foot .servives .title h2::before{
+    background-color: var(--main-color);
+}
+.foot div i{
+    margin: 5px;
+    color: white;
+}
+.foot  p{
+    color: white;
+    text-transform: capitalize;
+}
+@media (max-width:480px) {
+    footer{
+        height: 30vh;
+    }
+}
+/* end of footer */
